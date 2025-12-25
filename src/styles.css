@@ -74,6 +74,7 @@ body {
 
 .table tbody td {
   padding: 16px 10px;
+  border-bottom: 1px solid #e7edf3;
   text-align: center;
 }
 
