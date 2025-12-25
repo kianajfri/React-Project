@@ -29,20 +29,259 @@ body {
 
 .card {
   width: 100%;
-  max-width: 768px;
-  min-height: 803px;
+  max-width: 816px;
+  min-height: 875px;
   background: var(--card);
   border-radius: 16px;
   padding: 36px 24px;
   box-shadow: var(--shadow);
-  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  appearance: none;
+  border: 1px solid rgba(29, 78, 216, 0.25);
+  background: #1849ff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.addButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+}
+
+.addButtonIcon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.buttonSecondary {
+  background: #fff;
+  color: #1f2937;
+  border-color: rgba(31, 41, 55, 0.16);
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 50;
+}
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+}
+
+.modalHandle {
+  display: none;
+  width: 48px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.18);
+  margin: 10px auto 0;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
   text-align: center;
+}
+
+.modalHeaderSpacer {
+  width: 40px;
+}
+
+.modalBody {
+  padding: 16px;
+}
+
+.iconButton {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: rgba(17, 24, 39, 0.65);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  outline: none;
+}
+
+.iconButton:hover {
+  background: rgba(15, 23, 42, 0.06);
+  color: rgba(17, 24, 39, 0.85);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px 14px;
+  align-items: start;
+}
+
+.formLabel {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+.formControl {
+  display: grid;
+  gap: 6px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  inset-inline-start: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(24, 73, 255, 0.85);
+  pointer-events: none;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.formRow {
+  display: grid;
+  gap: 6px;
+}
+
+.label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.inputDate {
+  color: rgba(17, 24, 39, 0.6);
+}
+
+.button:focus-visible,
+.iconButton:focus-visible {
+  outline: none;
+}
+
+.inputWithIcon .input {
+  padding-inline-start: 38px;
+}
+
+.input:focus,
+.select:focus {
+  border-color: rgba(24, 73, 255, 0.55);
+}
+
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 6px;
+}
+
+.radioOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+.radioOption input {
+  accent-color: #1849ff;
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  padding-top: 4px;
 }
 
 .pageTitle {
@@ -69,6 +308,7 @@ body {
   color: var(--muted);
   text-align: right;
   line-height: 20px;
+  border-bottom: 1px solid rgba(24, 73, 255, 0.55);
 }
 
 .table tbody td {
@@ -89,6 +329,15 @@ body {
   min-width: 190px;
   font-weight: 400;
   font-size: 16px;
+}
+
+.colActions {
+  width: 56px;
+  text-align: center;
+}
+
+.colActions .iconButton {
+  margin: 0 auto;
 }
 
 .colDate {
@@ -125,17 +374,14 @@ body {
   background: #FAFAFB;
   border-radius: 14px;
   padding: 14px 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .mobileRow + .mobileRow {
   margin-top: 10px;
-}
-
-.mobileRowTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
 }
 
 .mobileAmount {
@@ -165,6 +411,46 @@ body {
   color: #242D35;
 }
 
+.mobileLeft {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.mobileRight {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.emptyState {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(107, 117, 128, 0.9);
+}
+
+.emptyIcon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: rgba(107, 117, 128, 0.9);
+}
+
+.emptyIcon svg {
+  display: block;
+}
+
+.emptyText {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 32px 12px;
@@ -188,5 +474,31 @@ body {
 
   .mobileRow + .mobileRow {
     margin-top: 0;
+  }
+
+  .modalBackdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal {
+    max-width: none;
+    border-radius: 18px 18px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .modalHandle {
+    display: block;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formLabel {
+    padding-top: 0;
+    justify-self: end;
   }
 }

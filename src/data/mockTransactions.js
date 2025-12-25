@@ -1,5 +1,5 @@
 export const mockTransactions = [
-  { id: 1, title: "قسط آخر پروژه کاریار", amount: 3100000, type: "income", date: "1404/06/31" },
+  { id: 1, title: "قسط آخر پروژه کاربر", amount: 3100000, type: "income", date: "1404/06/31" },
   { id: 2, title: "خرید لباس", amount: 1320000, type: "expense", date: "1404/06/27" },
   { id: 3, title: "سود سپرده", amount: 170000, type: "income", date: "1404/06/25" },
   { id: 4, title: "غذا", amount: 440000, type: "expense", date: "1404/06/20" },
@@ -7,9 +7,10 @@ export const mockTransactions = [
   { id: 6, title: "پارکینگ", amount: 136000, type: "expense", date: "1404/06/06" },
   { id: 7, title: "شارژ ایرانسل", amount: 55000, type: "expense", date: "1404/06/04" },
   { id: 8, title: "کادو تولد", amount: 500000, type: "income", date: "1404/06/01" },
-  { id: 9, title: "دندان پزشکی", amount: 9800000, type: "expense", date: "1404/05/25" },
+  { id: 9, title: "دندان‌پزشکی", amount: 9800000, type: "expense", date: "1404/05/25" },
   { id: 10, title: "غذا", amount: 250000, type: "expense", date: "1404/05/20" },
   { id: 11, title: "سوپرمارکت", amount: 758000, type: "expense", date: "1404/05/17" },
   { id: 12, title: "غذا", amount: 110000, type: "expense", date: "1404/05/11" },
-  { id: 13, title: "قسط سوم پروژه کاریار", amount: 3100000, type: "income", date: "1404/05/16" },
+  { id: 13, title: "قسط سوم پروژه کاربر", amount: 3100000, type: "income", date: "1404/05/16" },
 ];
+
