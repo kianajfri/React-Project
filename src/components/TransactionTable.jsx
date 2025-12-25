@@ -58,10 +58,10 @@ export default function TransactionTable({ items }) {
               className={`mobileRow ${isIncome ? "incomeRow" : "expenseRow"}`}
             >
               <div className="mobileRowTop">
+                <span className="mobileDate">{toPersianDigits(t.date)}</span>
                 <span className={`mobileAmount ${isIncome ? "income" : "expense"}`}>
                   {toPersianDigits(amountValue)}
                 </span>
-                <span className="mobileDate">{toPersianDigits(t.date)}</span>
               </div>
               <div className="mobileTitle">{t.title}</div>
             </div>
