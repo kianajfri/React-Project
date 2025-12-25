@@ -31,8 +31,8 @@ export default function TransactionTable({ items }) {
           <tbody>
             {items.map((t) => {
               const isIncome = t.type === "income";
-              const income = isIncome ? `+${formatAmount(t.amount)}` : "";
-              const expense = !isIncome ? `-${formatAmount(t.amount)}` : "";
+              const income = isIncome ? `${formatAmount(t.amount)}+` : "";
+              const expense = !isIncome ? `${formatAmount(t.amount)}-` : "";
 
               return (
                 <tr key={t.id}>
