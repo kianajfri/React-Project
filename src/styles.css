@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #eff3f7;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6B7580;
+  --border: #a2e8e2;
+  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  font-family: "Vazirmatn", "IRANSans", "IranYekan", "Tahoma", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 56px 16px 64px;
+  direction: rtl;
+}
+
+.card {
+  width: 100%;
+  max-width: 768px;
+  min-height: 803px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 36px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardHeader {
+  text-align: center;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #242D35;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111827;
+  font-size: 16.5px;
+}
+
+.table thead th {
+  padding: 16px 10px;
+  font-weight: 500;
+  color: var(--muted);
+  text-align: right;
+  line-height: 20px;
+}
+
+.table tbody td {
+  padding: 16px 10px;
+  text-align: right;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: rgba(215, 223, 233, 0.18);
+}
+
+.colTitle {
+  text-align: right;
+  min-width: 190px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.colDate {
+  color: #242D35;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.colAmount {
+  min-width: 160px;
+}
+
+.amount {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0px;
+}
+
+.amount.income {
+  color: #3EBD93;
+}
+
+.amount.expense {
+  color: #EF4E4E;
+}
+
+.mobileList {
+  display: none;
+  margin-top: 8px;
+}
+
+.mobileRow {
+  background: #FAFAFB;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+}
+
+.mobileRow + .mobileRow {
+  margin-top: 10px;
+}
+
+.mobileRowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mobileAmount {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+}
+
+.mobileAmount.income {
+  color: #3EBD93;
+}
+
+.mobileAmount.expense {
+  color: #EF4E4E;
+}
+
+.mobileDate {
+  color: #242D35;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mobileTitle {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #242D35;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 12px;
+  }
+
+  .card {
+    max-width: 380px;
+    min-height: auto;
+    padding: 28px 18px;
+  }
+
+  .table {
+    display: none;
+  }
+
+  .mobileList {
+    display: grid;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .mobileRow + .mobileRow {
+    margin-top: 0;
+  }
+}
